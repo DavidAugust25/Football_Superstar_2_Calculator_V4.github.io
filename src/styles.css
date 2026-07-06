@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Declaring all colours and vars for later use */
+
+:root {
+    --tableFontSize: 1rem;
+    --tableMargin: 40px;
+}
+
+/* General styling */
+
+html, body {
+  overflow: hidden; 
+  height: 100%;
+  display: block;
+  font-size: 14px;
+}
+
+header, main, footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+header {
+    height: 5%;
+    background: green;  
+}
+
+main {
+    height: 90%;
+    background: blue;
+}
+
+footer {
+    height: 5%;
+    background: red;
+}
+
+/* Styling the default view */
+
+/* Classes */
+.silver {
+    background: linear-gradient(127deg, #d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+    #d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+    #d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+    #d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+    #d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+    #d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+    #d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+    #d7d7d7, #c3c3c3, #cccccc, #c6c6c6);
+    color: #2b2b2b;
+}
+
+.redmetal {
+    background: linear-gradient(127deg, red);
+    color: azure;
+}
+
+.screenHalf {
+    display: flex;
+    width: 50%;
+    min-width: 500px;
+    height: 100%;
+    border: 1px solid white;
+}
+
+.gapTop {
+margin-top: var(--tableMargin);
+}
+
+.gapBottom {
+margin-bottom: var(--tableMargin);
+}
+
+.quarterCol {
+    width: 25%;
+}
+
+.fr7{
+    width: 7fr;
+}
+
+.playerStats {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid white;
+    overflow: hidden;
+    min-width: 250px;
+}
+
+.playerStats table { 
+width: 100%;
+border-collapse: collapse; 
+font-size: 0.9rem;
+
+}
+
+.playerStats select {
+outline: #2b2b2b;
+width: 100%;
+text-align: center;
+font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: var(--tableFontSize);
+}
+
+.playerStats th.Abilities {
+    width: 50%;
+}
+
+.playerStats th, td { 
+text-align: center; 
+border: 1px solid gray;
+box-sizing: border-box;
+height: 1.5rem;
+}
+
+.playerStats input[type=number] { 
+width: 100%; 
+box-sizing: border-box; 
+text-align: center; 
+font-size: var(--tableFontSize);
+font-family: "Roboto", sans-serif;
+font-weight: 600;
+color: #2b2b2b;
+}
+
+
+/* IDs */
+div#inputs {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div#basicDisplay {
+    width: 100%;
+}
+
+div#theyreNotEqual {
+    width: 35.3%;
+}
+
+div#theyreDifferent {
+    width: 47%;
+}
+
+/* Responsivity */
+
+@media (max-width: 1080px){
+    main {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    main div.screenHalf {
+        width: 100%;
+        flex: 1;
+    }
+
+    /* Mobile table */
+
+    .playerStats {
+    width: 30%;
+    height: 100%;
+    display: block;
+    border: 1px solid white;
+    overflow: hidden;
+    }
+
+    .playerStats table { 
+    width: 100%;
+    border-collapse: collapse; 
+
+    font-size: 12px;
+    }
+
+    .playerStats th, td { 
+    text-align: center; 
+    width: 120px;
+    }
+
+    .playerStats input { 
+    width: 100%; 
+    box-sizing: border-box; 
+    text-align: center; 
+    font-size: 8px;
+    }
+
+
+}
