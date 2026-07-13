@@ -363,3 +363,173 @@ color: var(--darkGrey);
     line-height: 22px;
     }
 }
+
+
+/*
+ To be deleted later
+*/
+
+div#presentation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    justify-items: center;
+    overflow-y: auto;
+    background-color: #f9fafb;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out;
+    z-index: 1000;
+}
+
+div#presentation.hidden {
+    transform: translateX(-100%);
+}
+
+div#presentation:not(.hidden) {
+    transform: translateX(0);
+}
+
+main .item {
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+#presentation app-login-menu {
+    display: contents;
+}
+
+#presentation .item {
+    width: 100%;
+    min-width: 0;
+    max-width: 360px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#carousel { background-color: #f3f4f6; }
+#login    { background-color: #ffffff; border-left: 2px solid #e5e7eb; border-right: 2px solid #e5e7eb; }
+#terms     { background-color: #f9fafb; }
+
+/* Form Layout with 3 Stacked Buttons */
+form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.input-group input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: column; /* Stacked layout fits 3 buttons beautifully */
+    gap: 8px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Button Colors */
+.btn-login  { background-color: #3b82f6; color: white; }
+.btn-create { background-color: #10b981; color: white; }
+.btn-delete { background-color: #dc2626; color: white; }
+#toggle-menu-btn { background-color: white; color: #dc2626; padding: 12px 24px; font-size: 1rem; border-radius: 8px;}
+
+/* Terms Box */
+.terms-box {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: white;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* Carousel Image Adjustments */
+.carousel-container {
+    margin: 20px 0 15px 0;
+    height: 250px;       /* Increased height to showcase the images */
+    width: 100%;
+    max-width: 320px;    /* Keeps the carousel from stretching too wide */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: makes it look crisp */
+    overflow: hidden;    /* Clips the image corners to match the border-radius */
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+/* Link your image folder files here */
+.slide-1 {
+    background-image: url('/carousel1.png');
+}
+
+.slide-2 {
+    background-image: url('/carousel2.png');
+}
+
+.slide-3 {
+    background-image: url('/carousel3.png');
+}
+
+.carousel-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-controls button {
+    background-color: #4b5563;
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}

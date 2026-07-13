@@ -7,10 +7,11 @@ import { ClubDisplay } from '../../components/club-display/club-display';
 import { MainDisplay } from '../../components/main-display/main-display';
 import { DisplayMenu } from '../../components/display-menu/display-menu';
 import { LeagueSelect } from '../../components/league-select/league-select';
+import { LoginMenu } from '../../components/login-menu/login-menu';
 
 @Component({
   selector: 'app-home-page',
-  imports: [Header, Footer, ReputationTable, StatInputs, ClubDisplay, MainDisplay, DisplayMenu, LeagueSelect],
+  imports: [Header, Footer, ReputationTable, StatInputs, ClubDisplay, MainDisplay, DisplayMenu, LeagueSelect, LoginMenu],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
 })
